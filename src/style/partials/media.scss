@@ -1,0 +1,163 @@
+@import "vars";
+
+
+@media screen and (max-width: 1430px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .tour {
+        &__picture {
+            width: 188px;
+            height: 188px;
+            border-width: 5px;
+        }
+        &__image {
+            width: 123px;
+            height: 123px;
+            right: -50px;
+            bottom: -20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .tours {
+        &:after,
+        &:before {
+            width: 22%;
+        }
+        &__grid {
+            flex-wrap: wrap;
+            position: relative;
+            padding: 20px 10px;
+            &--bottom {
+                top: auto;
+            }
+        }
+        &__title {
+            font-size: 42px;
+            text-shadow: -5px 5px 2px rgba(#030b16, 0.8);
+            letter-spacing: 1px;
+            top: -26px;
+        }
+    }
+    .tour {
+        margin-bottom: 10px;
+        border-width: 5px;
+        flex: 0 0 45%;
+        max-width: 45%;
+        &__title {
+            margin-top: 5px;
+            font-size: 21px;
+        }
+        &__date {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+    .footer {
+        margin: 20px 0px 20px;
+        &__title {
+            font-size: 31px;
+            line-height: normal;
+        }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .header__plane {
+        display: none;
+    }
+    .wrapper {
+        background-image: url(../img/bg-mobile.jpg);
+    }
+    .logo {
+        width: 120px;
+        height: 44px;
+    }
+    .header {
+        &__title {
+            font-size: 26px;
+            line-height: 30px;
+            margin-top: 20px;
+            &--red {
+                font-size: 40px;
+            }
+        }
+
+        &__center{
+            margin-bottom: auto;
+        }
+
+        &__grid {
+            height: 400px;
+            margin: 0px 0px 20px;
+        }
+        .btn__text {
+            font-size: 21px;
+            position: relative;
+            top: 3px;
+        }
+        &__btn {
+            width: 180px;
+            height: auto;
+            margin-top: 40px;
+        }
+        &__bottom {
+            margin-top: 0;
+            width: 290px;
+            height: 100px;
+        }
+    }
+    .tour {
+        &__title {
+            margin-top: 5px;
+            font-size: 16px;
+        }
+        &__date {
+            font-size: 16px;
+            line-height: 18px;
+        }
+        &__picture {
+            width: 118px;
+            height: 118px;
+            border-width: 5px;
+        }
+        &__image {
+            width: 83px;
+            height: 83px;
+            right: -20px;
+            bottom: -20px;
+        }
+    }
+    .tours {
+        &:after,
+        &:before {
+            width: 22%;
+        }
+        &__grid {
+            position: relative;
+            flex-wrap: wrap;
+            padding: 0px 10px 0px;
+            &--bottom {
+                top: auto;
+            }
+        }
+        &__title {
+            font-size: 21px;
+            top: -10px;
+        }
+    }
+    .footer {
+        &__title {
+            font-size: 21px;
+            line-height: normal;
+        }
+        &__image {
+            width: 66px;
+        }
+    }
+}
