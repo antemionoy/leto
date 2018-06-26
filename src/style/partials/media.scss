@@ -1,6 +1,4 @@
 @import "vars";
-
-
 @media screen and (max-width: 1430px) {
     .container {
         width: 100%;
@@ -12,7 +10,11 @@
         &__picture {
             width: 188px;
             height: 188px;
-            border-width: 5px;
+            border-width: 10px;
+        }
+        &__title {
+            margin-top: 5px;
+            font-size: 20px;
         }
         &__image {
             width: 123px;
@@ -24,6 +26,13 @@
 }
 
 @media screen and (max-width: 1023px) {
+    .header {
+        &__title {
+            font-size: 46px;
+            line-height: 56px;
+            margin-top: 20px;
+        }
+    }
     .tours {
         &:after,
         &:before {
@@ -46,17 +55,8 @@
     }
     .tour {
         margin-bottom: 10px;
-        border-width: 5px;
         flex: 0 0 45%;
         max-width: 45%;
-        &__title {
-            margin-top: 5px;
-            font-size: 21px;
-        }
-        &__date {
-            font-size: 18px;
-            line-height: 22px;
-        }
     }
     .footer {
         margin: 20px 0px 20px;
@@ -67,7 +67,7 @@
     }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 600px) {
     .header__plane {
         display: none;
     }
@@ -81,19 +81,20 @@
     .header {
         &__title {
             font-size: 26px;
-            line-height: 30px;
+            line-height: 36px;
             margin-top: 20px;
             &--red {
                 font-size: 40px;
             }
+            br {
+                display: block;
+            }
         }
-
-        &__center{
+        &__center {
             margin-bottom: auto;
         }
-
         &__grid {
-            height: 400px;
+            height: auto;
             margin: 0px 0px 20px;
         }
         .btn__text {
@@ -107,7 +108,7 @@
             margin-top: 40px;
         }
         &__bottom {
-            margin-top: 0;
+            margin-top: 50px;
             width: 290px;
             height: 100px;
         }
@@ -115,28 +116,29 @@
     .tour {
         &__title {
             margin-top: 5px;
-            font-size: 16px;
+            font-size: 18px;
         }
         &__date {
-            font-size: 16px;
-            line-height: 18px;
+            font-size: 18px;
+            line-height: 22px;
         }
         &__picture {
-            width: 118px;
-            height: 118px;
+            width: 160px;
+            height: 160px;
             border-width: 5px;
         }
         &__image {
-            width: 83px;
-            height: 83px;
+            width: 65px;
+            height: 65px;
             right: -20px;
-            bottom: -20px;
+            bottom: -10px;
         }
     }
     .tours {
+        margin-top: 0px;
         &:after,
         &:before {
-            width: 22%;
+            width: 17%;
         }
         &__grid {
             position: relative;
@@ -147,8 +149,8 @@
             }
         }
         &__title {
-            font-size: 21px;
-            top: -10px;
+            font-size: 27px;
+            top: -16px;
         }
     }
     .footer {
@@ -157,7 +159,40 @@
             line-height: normal;
         }
         &__image {
-            width: 66px;
+            width: 70px;
+        }
+    }
+    .crab {
+        animation-name: crab-move__mobile;
+        &--desctop {
+            display: none;
+        }
+        &--mobile {
+            display: block;
+            top: -80px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tour {
+        &__picture {
+            width: 120px;
+            height: 114px;
+        }
+        &__title {
+            margin-top: 5px;
+            font-size: 16px;
+        }
+        &__date {
+            font-size: 16px;
+            line-height: 18px;
+        }
+        &__image {
+            width: 65px;
+            height: 65px;
+            right: -20px;
+            bottom: -10px;
         }
     }
 }
