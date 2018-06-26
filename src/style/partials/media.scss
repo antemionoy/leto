@@ -164,12 +164,103 @@
     }
     .crab {
         animation-name: crab-move__mobile;
-        &--desctop {
-            display: none;
+    }
+    .crab {
+        top: -80px;
+        left: 150px;
+        &__icon {
+            background-image: url(../img/sprite.png);
+            background-repeat: no-repeat;
         }
-        &--mobile {
-            display: block;
-            top: -80px;
+        &__sheel {
+            background-position: -272px 0px;
+            width: 47px;
+            height: 54px;
+        }
+        &__body {
+            position: relative;
+            top: -16px;
+            margin: 0 auto;
+            padding: 8px;
+            background-position: -272px -167px;
+            width: 38px;
+            height: 21px;
+            z-index: 2;
+        }
+        &__pupil {
+            position: absolute;
+            background-position: -313px -69px;
+            width: 6px;
+            height: 4px;
+            &--left {
+                left: 7px;
+            }
+            &--right {
+                right: 7px;
+            }
+        }
+        &__eye {
+            top: 9px;
+            width: 10px;
+            height: 9px;
+            &--left {
+                background-position: 0px -211px;
+                left: 8px;
+            }
+            &--right {
+                background-position: -25px -211px;
+                right: 8px;
+            }
+        }
+        &__foot {
+            top: 37px;
+            width: 26px;
+            height: 34px;
+            z-index: 1;
+            &--left {
+                background-position: -272px -69px;
+                width: 26px;
+                height: 34px;
+                left: -19px;
+                animation: crab-foot-left--mobile 0.3s infinite linear;
+            }
+            &--right {
+                background-position: -272px -118px;
+                right: -19px;
+                animation: crab-foot-right--mobile 0.3s infinite linear;
+            }
+        }
+        &__hand {
+            bottom: -10px;
+            width: 26px;
+            height: 19px;
+            &--left {
+                background-position: -207px -80px;
+                left: -8px;
+            }
+            &--right {
+                background-position: -139px -131px;
+                right: -8px;
+                bottom: -12px;
+            }
+        }
+    }
+    .header__btn:hover {
+        .crab {
+            animation-play-state: paused;
+            &__foot {
+                animation-play-state: inherit;
+                &--right {
+                    animation: rotit--mobile 1.8s infinite ease-in-out;
+                }
+            }
+            &__hand {
+                &--right {
+                    animation: crab-hand--mobile 1.5s infinite;
+                animation-timing-function: linear;
+                animation-direction: alternate;
+                }
+            }
         }
     }
 }
@@ -194,5 +285,71 @@
             right: -20px;
             bottom: -10px;
         }
+    }
+}
+
+@keyframes crab-move__mobile {
+    from {
+        left: 0;
+    }
+    to {
+        left: 60%;
+    }
+}
+
+@keyframes crab-foot-right--mobile {
+    to {
+        transform: rotate(0deg) translateY(0px) translateX(0px);
+    }
+    from {
+        transform: rotate(-25deg) translateY(-9px) translateX(0px);
+    }
+}
+
+@keyframes crab-foot-left--mobile {
+    to {
+        transform: rotate(25deg) translateY(-9px) translateX(-0px);
+    }
+    from {
+        transform: rotate(0deg) translateY(0px) translateX(-0px);
+    }
+}
+
+@keyframes crab-hand--mobile {
+    to {
+        transform: translateY(0px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(1px) rotate(-13deg);
+    }
+}
+
+@keyframes rotit--mobile {
+    0% {
+        transform: translateY(4px) rotate(5deg);
+    }
+    50% {
+        transform: translateY(4px) rotate(5deg);
+    }
+    57% {
+        transform: translateY(-4px) rotate(-15deg);
+    }
+    58% {
+        transform: translateY(4px) rotate(5deg);
+    }
+    65% {
+        transform: translateY(-4px) rotate(-15deg);
+    }
+    66% {
+        transform: translateY(4px) rotate(5deg);
+    }
+    73% {
+        transform: translateY(-4px) rotate(-15deg);
+    }
+    74% {
+        transform: translateY(4px) rotate(5deg);
+    }
+    100% {
+        transform: translateY(4px) rotate(5deg);
     }
 }
